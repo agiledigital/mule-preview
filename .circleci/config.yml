@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:lts-jessie
+      - image: thheller/cljs-dev:latest
 
     working_directory: ~/repo
 
@@ -20,17 +20,6 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-{{ checksum "shadow-cljs.edn" }}
-
-      # Native Image Build
-      - run:
-          command: |
-            # Run in the same shell so that we don't lose environment variables
-            echo "Installing Jabba"
-            curl -sL https://raw.githubusercontent.com/shyiko/jabba/0.11.2/install.sh | bash
-            echo "Initialise Jabba at [${JABBA_HOME}]"
-            . "${JABBA_HOME}/jabba.sh"
-            echo "Install Java"
-            jabba install adopt@1.8-0
 
       - run: npx shadow-cljs info
       - run: npm install
@@ -57,7 +46,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:lts-jessie
+      - image: thheller/cljs-dev:latest
     working_directory: ~/repo
     steps:
       - checkout
