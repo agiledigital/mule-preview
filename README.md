@@ -10,9 +10,9 @@
 This is the core module of the Mule Preview project.
 
 It is a self contained bundle that can be included in other projects
-to render Mule XML files.
+to render Mule XML files in a browser context using React.
 
-See the [Mule Preview Browser Plugin](../browser-plugin) for example usage.
+See the [Mule Preview Browser Extension](https://github.com/agiledigital/mule-preview-browser-extension) for example usage.
 
 ### Instructions
 
@@ -41,6 +41,24 @@ where:
             "."
         );
 
+### Preparing
+
+On a fresh checkout of the codebase you will need to extract the mappings
+and icon assets from Anypoint Studio using [mule-metadata-extractor](https://github.com/agiledigital/mule-metadata-extractor).
+        
+Download the [latest release of mule-metadata-extractor](https://github.com/agiledigital/mule-metadata-extractor/releases)
+and run the following commands:
+        
+        export ANYPOINT_STUDIO_INSTALLATION=/opt/AnypointStudio  
+	java -jar mule-metadata-extractor-1.0.14-standalone.jar -d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/ generate-mappings
+	java -jar mule-metadata-extractor-1.0.14-standalone.jar -d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/img/icons extract-images
+	java -jar mule-metadata-extractor-1.0.14-standalone.jar-d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/img/icons apply-light-theme
+
+At some point we may provide pre-extracted bundles that can be used with Mule Preview.
+We are still unsure about the licencing conditions around bundling and redistributing Mulesoft assets.
+We are waiting for a response from Mulesoft. In the meantime feel free to extract the files yourself
+for personal use.
+
 ### Developing
 
 To work on this module, the following command will mount Mule Preview in a test environment
@@ -57,25 +75,6 @@ Simply run these command to produce a production build
     $ npm run build
 
 The release files will be placed in the "dist" folder
-
-### FAQ
-
-#### What is the "hack-remove-bad-source-map" script in package.json?
-
-To make packaging easier the mapping metadata extracted from Anypoint Studio
-(mappings.json) is embedded into the output files.
-
-Since it is such a large blob of data (~128 kB), it causes most source map processors
-to crash with OOM errors. This includes running tests with Jest.
-
-We don't really need that source map anyway, so I've added a temporary build step to
-remove it before running tests so that Jest doesn't crash.
-
-When consuming the output module with other tools such as Webpack (see browser-extension)
-you will need to exclude the mapping file from being processed.
-
-The long term solution is to find a better way to bundle the JSON blob with
-the module but there are other bugs to fix that are higher priority right now.
 
 ### Acknowledgements
 
