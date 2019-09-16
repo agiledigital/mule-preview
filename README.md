@@ -1,42 +1,77 @@
-## Mule Preview
+## Mule Preview Javascript Module
 
-[![GitHub License](https://img.shields.io/github/license/agiledigital/mule-preview.svg)](https://github.com/agiledigital/mule-preview/blob/master/LICENSE)
-[![Build Status](https://travis-ci.com/agiledigital/mule-preview.svg?branch=master)](https://travis-ci.com/agiledigital/mule-preview)
-[![Known Vulnerabilities](https://snyk.io//test/github/agiledigital/mule-preview/badge.svg?targetFile=browser-plugin/package.json)](https://snyk.io//test/github/agiledigital/mule-preview?targetFile=browser-plugin/package.json)
-[![Known Vulnerabilities](https://snyk.io//test/github/agiledigital/mule-preview/badge.svg?targetFile=client/package.json)](https://snyk.io//test/github/agiledigital/mule-preview?targetFile=client/package.json)
-[![Maintainability](https://api.codeclimate.com/v1/badges/958029813bd4b7f26dca/maintainability)](https://codeclimate.com/github/agiledigital/mule-preview/maintainability)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/agiledigital/mule-preview)
+### Summary
 
-A project to take Mule configuration XML files and render the flows in HTML
-and also display visual diffs for things like Pull Requests.
+This is the core module of the Mule Preview project.
 
-![Example screenshot showing rendered flows](https://raw.githubusercontent.com/NoxHarmonium/mule-preview/master/doc/example.PNG "Example screenshot showing rendered flows")
+It is a self contained bundle that can be included in other projects
+to render Mule XML files.
 
-### Structure
+See the [Mule Preview Browser Plugin](../browser-plugin) for example usage.
 
-It is currently made up of three modules placed in subdirectories:
+### Instructions
 
-#### Browser Extension
+The module exposes four functions that can be used in other projects:
 
-A browser extension written in Javascript that can display visual diffs of Mule files in Bitbucket.
+- `mountUrlDiffOnElement(mulePreviewElement, fileAUrl, fileBUrl, contentRoot)`
+- `mountUrlPreviewOnElement(mulePreviewElement, fileUrl, contentRoot)`
+- `mountDiffOnElement(mulePreviewElement, fileAContent, fileBContent, contentRoot)`
+- `mountPreviewOnElement(mulePreviewElement, fileContent, contentRoot)`
 
-#### Client
+where:
 
-The self contained module that can be used by other modules such as the browser extension.
+- `mulePreviewElement` is an element somewhere in the DOM to mount the Mule Preview React renderer on
+- `fileUrl`, `fileAUrl` and `fileBUrl` are URLs to XML files to render or diff
+- `fileAContent`, `fileBContent` and `fileContent` are strings containing XML data to render or diff
+- `contentRoot` is the a prefix to prepend to any requests for the Mule component image files.
 
-It uses Clojurescript to transform the XML into a React virtual DOM
-using the Reagent bindings library.
+        import {
+            mountUrlDiffOnElement,
+        } from "mule-preview";
 
-### Building Everything
+        mountDiffOnElement(
+            document.getElementById('root-node'),
+            "https://example.com/muleA.xml",
+            "https://example.com/muleB.xml",
+            "."
+        );
 
-There is a Makefile that will build everything for you. Once you have the required dependencies you will simply have to run
+### Developing
 
-    $ make -j2
+To work on this module, the following command will mount Mule Preview in a test environment
+with hot reloading.
 
-### Dependencies
+    $ npm start
 
-You will need the following things:
+Simply navigate to http://localhost:8080 in a browser to view the test environment
 
-- make (should be on most \*nix like environments)
-- A JDK >= 1.8 (E.g. https://adoptopenjdk.net/)
-- node >= 10.0 (See .nvmrc for exact version)
+### Building
+
+Simply run these command to produce a production build
+
+    $ npm run build
+
+The release files will be placed in the "dist" folder
+
+### FAQ
+
+#### What is the "hack-remove-bad-source-map" script in package.json?
+
+To make packaging easier the mapping metadata extracted from Anypoint Studio
+(mappings.json) is embedded into the output files.
+
+Since it is such a large blob of data (~128 kB), it causes most source map processors
+to crash with OOM errors. This includes running tests with Jest.
+
+We don't really need that source map anyway, so I've added a temporary build step to
+remove it before running tests so that Jest doesn't crash.
+
+When consuming the output module with other tools such as Webpack (see browser-extension)
+you will need to exclude the mapping file from being processed.
+
+The long term solution is to find a better way to bundle the JSON blob with
+the module but there are other bugs to fix that are higher priority right now.
+
+### Acknowledgements
+
+Math icons made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
