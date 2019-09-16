@@ -44,7 +44,9 @@
   },
   "main": "dist/mule_preview.client.js_export.js",
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "public/css/**/*",
+    "public/img/*"
   ],
   "repository": "agiledigital/mule-preview",
   "bugs": "https://github.com/agiledigital/mule-preview/issues/",
