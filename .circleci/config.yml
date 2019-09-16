@@ -1,0 +1,88 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:lts-jessie
+
+    working_directory: ~/repo
+
+    environment:
+      LEIN_ROOT: "true"
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      JABBA_HOME: /tmp/.jabba
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "shadow-cljs.edn" }}
+
+      # Native Image Build
+      - run:
+          command: |
+            # Run in the same shell so that we don't lose environment variables
+            echo "Installing Jabba"
+            curl -sL https://raw.githubusercontent.com/shyiko/jabba/0.11.2/install.sh | bash
+            echo "Initialise Jabba at [${JABBA_HOME}]"
+            . "${JABBA_HOME}/jabba.sh"
+            echo "Install Java"
+            jabba install adopt@1.8-0
+
+      - run: npx shadow-cljs info
+      - run: npm install
+      - run: npm pack
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: v1-dependencies-{{ checksum "shadow-cljs.edn" }}
+
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - .
+
+      - store_artifacts:
+          path: agiledigital-mule-preview-*.tgz
+
+  deploy:
+    docker:
+      - image: circleci/node:lts-jessie
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+
+workflows:
+  version: 2
+  build-n-deploy:
+    jobs:
+      - build:
+          filters:  # required since `deploy` has tag filters AND requires `build`
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
