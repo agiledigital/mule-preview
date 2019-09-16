@@ -21,6 +21,7 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-{{ checksum "shadow-cljs.edn" }}
 
+      - run: cd libs/reagent && lein install
       - run: npx shadow-cljs info
       - run: npm install
       - run: npm pack
