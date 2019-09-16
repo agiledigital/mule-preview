@@ -28,6 +28,7 @@ jobs:
       - run: cd libs/reagent && lein install
       - run: npx shadow-cljs info
       - run: npm install
+      - run: npm run build
       - run: npm pack
       - run: mkdir -p artifacts && mv agiledigital-mule-preview-*.tgz artifacts/
 

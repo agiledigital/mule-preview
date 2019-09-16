@@ -12,6 +12,7 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "if-env": "^1.0.4",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "prettier-stylelint": "^0.4.2",
@@ -26,7 +27,7 @@
   },
   "scripts": {
     "info": "shadow-cljs info",
-    "prepare": "npm run build",
+    "prepare": "if-env CI=true && echo 'Skipping Prepare' || npm run build",
     "prebuild": "rimraf ./public/js && rimraf dist/* && rimraf build/* && rimraf .shadow-cljs",
     "start": "shadow-cljs watch frontend",
     "lint": "eslint --fix src/test && stylelint --fix \"public/css/**/*.scss\" \"public/css/**/*.css\" \"public/css/**/*.html\"",
