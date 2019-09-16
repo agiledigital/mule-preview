@@ -1,4 +1,9 @@
-## Mule Preview Javascript Module
+# Mule Preview
+
+[![GitHub License](https://img.shields.io/github/license/agiledigital/mule-preview.svg)](https://github.com/agiledigital/mule-preview-browser-extension/blob/master/LICENSE)
+[![CircleCI](https://circleci.com/gh/agiledigital/mule-preview.svg?style=svg)](https://circleci.com/gh/agiledigital/mule-preview)
+[![Known Vulnerabilities](https://snyk.io//test/github/agiledigital/mule-preview/badge.svg?targetFile=package.json)](https://snyk.io//test/github/agiledigital/mule-preview?targetFile=package.json)
+![npm (scoped)](https://img.shields.io/npm/v/@agiledigital/mule-preview)
 
 ### Summary
 
