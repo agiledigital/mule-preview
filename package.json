@@ -1,6 +1,6 @@
 {
   "name": "@agiledigital/mule-preview",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.5.5",
