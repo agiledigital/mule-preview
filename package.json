@@ -33,7 +33,7 @@
     "prebuild": "rimraf ./public/js && rimraf dist/* && rimraf build/* && rimraf .shadow-cljs",
     "start": "shadow-cljs watch frontend",
     "lint": "eslint --fix src/test && stylelint --fix \"public/css/**/*.scss\" \"public/css/**/*.css\" \"public/css/**/*.html\"",
-    "test": "npm run lint && shadow-cljs compile dist && jest",
+    "test": "npm run lint && shadow-cljs compile dist && jest --logHeapUsage",
     "build": "npm test && npm run prebuild && shadow-cljs release dist --source-maps"
   },
   "dependencies": {
