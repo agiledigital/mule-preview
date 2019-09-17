@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:s3="http://www.mulesoft.org/schema/mule/s3" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:spring="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
@@ -76,6 +76,7 @@ payload distinctBy $.pies]]></dw:set-payload>
                 <mock:with-attribute name="name" whereValue="#sdfsdfw"/>
             </mock:with-attributes>
         </mock:verify-call>
+        <mock:throw-an exception-ref="#[]" doc:name="Throw an Exception"/>
     </munit:test>
     <munit:before-suite name="test-mercer.read.eventBefore_Suite" description="MUnit Test">
         <set-payload doc:name="Set Payload"/>
