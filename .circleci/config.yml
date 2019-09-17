@@ -60,11 +60,8 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
-          name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
-      - run:
-          name: Publish package
-          command: npm publish --access public --unsafe-perm
+          name: Run release
+          command: npm run semantic-release
 
 workflows:
   version: 2
