@@ -22,8 +22,8 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-{{ checksum "shadow-cljs.edn" }}
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-{{ checksum "shadow-cljs.edn" }}
 
       - run: cd libs/reagent && lein install
       - run: npx shadow-cljs info
@@ -35,12 +35,12 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-          key: v1-dependencies-{{ checksum "shadow-cljs.edn" }}
+          key: v2-dependencies-{{ checksum "shadow-cljs.edn" }}
 
       - save_cache:
           paths:
             - ./node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v2-dependencies-{{ checksum "package.json" }}
 
 
       - persist_to_workspace:
