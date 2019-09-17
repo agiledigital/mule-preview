@@ -32,3 +32,7 @@
   "MUnit test flows"
   #{"munit:test" "munit:before-test" "munit:after-test"
     "munit:after-suite" "munit:before-suite"})
+
+(def munit-setup-component-list
+  "Components that sit up above in the 'Setup' area of a MUnit test"
+  #{"mock:when" "mock:spy" "mock:throw-an"})
