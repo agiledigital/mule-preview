@@ -9,4 +9,5 @@ USER root
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get -y --no-install-recommends install nodejs=10.16.3-1nodesource1
 USER circleci
+ENV PATH /usr/bin:${PATH}
 CMD ["/bin/bash"]
