@@ -21,7 +21,7 @@
     "enricher" "poll" "request-reply"
     "until-successful" "when" "otherwise" "processor-chain"
     "munit:test" "munit:before-test" "munit:after-test"
-    "munit:after-suite" "munit:before-suite"})
+    "munit:after-suite" "munit:before-suite" "mock:spy"})
 
 (def error-handler-component-list
   "Elements that can be in the error section of an error handler container"
@@ -32,3 +32,7 @@
   "MUnit test flows"
   #{"munit:test" "munit:before-test" "munit:after-test"
     "munit:after-suite" "munit:before-suite"})
+
+(def munit-setup-component-list
+  "Components that sit up above in the 'Setup' area of a MUnit test"
+  #{"mock:when" "mock:spy" "mock:throw-an"})

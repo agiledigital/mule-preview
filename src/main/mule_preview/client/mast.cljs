@@ -7,7 +7,8 @@
    [mule-preview.client.utils :refer [remove-location]]
    [mule-preview.client.mappings :refer [root-container horizontal-container-list
                                          vertical-container-list error-handler-component-list
-                                         error-handler-container-list munit-container-list]]))
+                                         error-handler-container-list munit-container-list
+                                         munit-setup-component-list]]))
 
 (defn- get-tag [node]
   (name (node :tag)))
@@ -23,9 +24,8 @@
     result))
 
 (defn- is-munit-mock-component [node]
-  (let [tag (get-tag node)
-        result (starts-with? tag "mock:")]
-    result))
+  (let [tag (get-tag node)]
+    (contains? munit-setup-component-list tag)))
 
 (defn- get-description [node]
   (let [doc-name (get-in node [:attributes :doc:name])
