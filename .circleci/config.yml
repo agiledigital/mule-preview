@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: thheller/cljs-dev:latest
+      - image: nodrama/cljs-dev:latest
 
     working_directory: ~/repo
 
