@@ -42,5 +42,4 @@
         dom-a (mast->dom a)
         dom-b (mast->dom b)
         result (.diff dd (clj->js dom-a) (clj->js dom-b))]
-    (js/console.dir result)
     (clojurise result)))

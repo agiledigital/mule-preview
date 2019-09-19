@@ -8,13 +8,15 @@
  [[reagent "0.8.1-BINDFIX" :exclusions [cljsjs/react cljsjs/react-dom]]
   [cljs-http "0.1.46"]
   [lambdaisland/uri "1.1.0"]
-  [cider/cider-nrepl "0.21.1"]]
+  [cider/cider-nrepl "0.21.1"]
+  [camel-snake-kebab "0.4.0"]
+  [prismatic/schema "1.1.12"]]
 
  :dev-http {8080 "public"}
  :builds
  {:frontend
   {:target :browser
-   :modules {:main {:init-fn mule-preview.client.core/init!}}
+   :modules {:main {:init-fn mule-preview.dev.init/init!}}
    :output-dir "public/js"
    :asset-path "/js"}
   :dist
@@ -22,4 +24,11 @@
    :output-dir "dist"
    :compiler-options {:infer-externs :auto}
    :entries [mule-preview.client.js-export
-             mule-preview.client.test-utils]}}}
+             mule-preview.client.test-utils]}
+  ;; Special build target just for the build report
+  ;; It won't actually run properly
+  :report
+  {:target :browser
+   :modules {:main {:init-fn mule-preview.client.js-export/MulePreviewDiffUrl}}
+   :output-dir "public/js"
+   :asset-path "/js"}}}

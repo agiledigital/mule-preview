@@ -31,6 +31,7 @@ jobs:
       - run: npm run build
       - run: npm pack
       - run: mkdir -p artifacts && mv agiledigital-mule-preview-*.tgz artifacts/
+      - run: npm run build-report && mv build-report.html artifacts/
 
       - save_cache:
           paths:
@@ -41,7 +42,6 @@ jobs:
           paths:
             - ./node_modules
           key: v2-dependencies-{{ checksum "package.json" }}
-
 
       - persist_to_workspace:
           root: ~/repo

@@ -2,7 +2,7 @@
   "The react components that render the Mule preview"
   (:require
    [reagent.core :as r]
-   [react-dom :as react-dom]
+   ["react-dom" :as react-dom]
    [clojure.string :refer [split replace]]
    [lambdaisland.uri :refer [join]]
    ["react-popper" :refer [Manager Reference Popper]])
@@ -120,6 +120,7 @@
       :else nil)]])
 
 (defn popper [change-record labels location showing-atom anchor-el]
+  ; TODO: Remove this dependency on react-dom
   (when @showing-atom (react-dom/createPortal
                        (r/as-element [:div {:class "mp-popover-root"}
                                       [:> Popper {:placement "auto" :reference-element @anchor-el}

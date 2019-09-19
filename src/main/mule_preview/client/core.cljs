@@ -8,44 +8,58 @@
 (defn view [root-component]
   [:div {:class "mp root-component"} @root-component])
 
-(defn mount-root [element root-component]
-  (r/render [(partial view root-component)] element))
+(defn mule-preview-diff-url
+  [{:keys [content-urls content-root]}]
+  (let [root-component (r/atom [:div])
+        [url-a url-b] content-urls]
+    (r/create-class
+     {:display-name  "MulePreviewDiffUrl"
+      :component-did-mount
+      (fn [this]
+        (start-diff-url url-a
+                        url-b
+                        root-component
+                        content-root))
+      :reagent-render
+      (partial view root-component)})))
 
-(defn ^:export mount-url-diff-on-element [element file-a file-b content-root]
-  (let [root-component (r/atom [:div])]
-    (start-diff-url file-a
-                    file-b
+(defn mule-preview-diff-content
+  [{:keys [content-strings content-root]}]
+  (let [root-component (r/atom [:div])
+        [content-a content-b] content-strings]
+    (r/create-class
+     {:display-name  "MulePreviewDiffContent"
+      :component-did-mount
+      (fn [this]
+        (start-diff content-a
+                    content-b
                     root-component
-                    content-root)
-    (mount-root element root-component)))
+                    content-root))
+      :reagent-render
+      (partial view root-component)})))
 
-(defn ^:export mount-url-preview-on-element [element file content-root]
+(defn mule-preview-url
+  [{:keys [content-url content-root]}]
   (let [root-component (r/atom [:div])]
-    (start-preview-url
-     file
-     root-component
-     content-root)
-    (mount-root element root-component)))
+    (r/create-class
+     {:display-name  "MulePreviewUrl"
+      :component-did-mount
+      (fn [this]
+        (start-preview-url content-url
+                           root-component
+                           content-root))
+      :reagent-render
+      (partial view root-component)})))
 
-(defn ^:export mount-diff-on-element [element content-a content-b content-root]
+(defn mule-preview-content
+  [{:keys [content-string content-root]}]
   (let [root-component (r/atom [:div])]
-    (start-diff content-a
-                content-b
-                root-component
-                content-root)
-    (mount-root element root-component)))
-
-(defn ^:export mount-preview-on-element [element content content-root]
-  (let [root-component (r/atom [:div])]
-    (start-preview
-     content
-     root-component
-     content-root)
-    (mount-root element root-component)))
-
-(defn ^:dev/after-load init! []
-  (mount-url-diff-on-element
-   (.getElementById js/document "app")
-   "/example_xml/nice-example.xml"
-   "/example_xml/nice-example-diff.xml"
-   "."))
+    (r/create-class
+     {:display-name  "MulePreviewContent"
+      :component-did-mount
+      (fn [this]
+        (start-preview content-string
+                       root-component
+                       content-root))
+      :reagent-render
+      (partial view root-component)})))
