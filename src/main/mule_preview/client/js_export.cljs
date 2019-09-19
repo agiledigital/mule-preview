@@ -7,6 +7,7 @@
                                      mount-diff-on-element
                                      mount-preview-on-element]]))
 
+(enable-console-print!)
 (def ^:export mountUrlDiffOnElement mount-url-diff-on-element)
 (def ^:export mountUrlPreviewOnElement mount-url-preview-on-element)
 (def ^:export mountDiffOnElement mount-diff-on-element)
