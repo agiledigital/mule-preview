@@ -4,6 +4,7 @@
 [![CircleCI](https://circleci.com/gh/agiledigital/mule-preview.svg?style=svg)](https://circleci.com/gh/agiledigital/mule-preview)
 [![Known Vulnerabilities](https://snyk.io//test/github/agiledigital/mule-preview/badge.svg?targetFile=package.json)](https://snyk.io//test/github/agiledigital/mule-preview?targetFile=package.json)
 ![npm (scoped)](https://img.shields.io/npm/v/@agiledigital/mule-preview)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fagiledigital%2Fmule-preview.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fagiledigital%2Fmule-preview?ref=badge_shield)
 
 ### Summary
 
@@ -79,3 +80,7 @@ The release files will be placed in the "dist" folder
 ### Acknowledgements
 
 Math icons made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fagiledigital%2Fmule-preview.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fagiledigital%2Fmule-preview?ref=badge_large)
