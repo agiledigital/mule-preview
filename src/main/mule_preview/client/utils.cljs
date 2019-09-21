@@ -17,6 +17,10 @@
   "Transforms the values in a map using the provided function f"
   (into {} (for [[k v] map] [k (f v)])))
 
+(defn map-keys [f map]
+  "Transforms the keys in a map using the provided function f"
+  (into {} (for [[k v] map] [(f k) v])))
+
 (defn remove-location [map]
   "Removes any location key in a parsed XML map."
   (prewalk #(if (map? %) (dissoc % :location) %) map))
