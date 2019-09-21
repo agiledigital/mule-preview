@@ -17,43 +17,48 @@ See the [Mule Preview Browser Extension](https://github.com/agiledigital/mule-pr
 
 ### Instructions
 
-The module exposes four functions that can be used in other projects:
+The module exposes four components that can be imported and used in a React project:
 
-- `mountUrlDiffOnElement(mulePreviewElement, fileAUrl, fileBUrl, contentRoot)`
-- `mountUrlPreviewOnElement(mulePreviewElement, fileUrl, contentRoot)`
-- `mountDiffOnElement(mulePreviewElement, fileAContent, fileBContent, contentRoot)`
-- `mountPreviewOnElement(mulePreviewElement, fileContent, contentRoot)`
+- `<MulePreviewDiffUrl contentUrls={["https://a.xml", "https://b.xml"] contentRoot="."} />`
+- `<MulePreviewDiffContent contentStrings={["<mule></mule>", "<mule></mule>"] contentRoot="."} />`
+- `<MulePreviewUrl contentUrl="https://a.xml" contentRoot="."} />`
+- `<MulePreviewContent contentString="<mule></mule>" contentRoot="."} />`
 
 where:
 
-- `mulePreviewElement` is an element somewhere in the DOM to mount the Mule Preview React renderer on
-- `fileUrl`, `fileAUrl` and `fileBUrl` are URLs to XML files to render or diff
-- `fileAContent`, `fileBContent` and `fileContent` are strings containing XML data to render or diff
+- `contentUrls` is a tuple of two URLs to be diffed
+- `contentStrings` is a tuple of two strings with XML content to be diffed
+- `contentUrl` is a URL to be rendered as a preview
+- `contentString` is a string with XML to be rendered as a preview
 - `contentRoot` is the a prefix to prepend to any requests for the Mule component image files.
 
+        import React from "react";
+        import ReactDOM from "react-dom";
         import {
-            mountUrlDiffOnElement,
+            MulePreviewDiffUrl,
         } from "mule-preview";
 
-        mountDiffOnElement(
-            document.getElementById('root-node'),
-            "https://example.com/muleA.xml",
-            "https://example.com/muleB.xml",
-            "."
+
+        ReactDOM.render(
+            <MulePreviewDiffUrl
+              contentUrls={["https://example.com/muleA.xml", "https://example.com/muleB.xml"]}
+              contentRoot="."
+            />,
+            document.getElementById('root-node')
         );
 
 ### Preparing
 
 On a fresh checkout of the codebase you will need to extract the mappings
 and icon assets from Anypoint Studio using [mule-metadata-extractor](https://github.com/agiledigital/mule-metadata-extractor).
-        
+
 Download the [latest release of mule-metadata-extractor](https://github.com/agiledigital/mule-metadata-extractor/releases)
 and run the following commands:
-        
-        export ANYPOINT_STUDIO_INSTALLATION=/opt/AnypointStudio  
-	java -jar mule-metadata-extractor-1.0.14-standalone.jar -d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/ generate-mappings
-	java -jar mule-metadata-extractor-1.0.14-standalone.jar -d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/img/icons extract-images
-	java -jar mule-metadata-extractor-1.0.14-standalone.jar-d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/img/icons apply-light-theme
+
+    export ANYPOINT_STUDIO_INSTALLATION=/opt/AnypointStudio
+    java -jar mule-metadata-extractor-1.0.14-standalone.jar -d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/ generate-mappings
+    java -jar mule-metadata-extractor-1.0.14-standalone.jar -d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/img/icons extract-images
+    java -jar mule-metadata-extractor-1.0.14-standalone.jar-d "${ANYPOINT_STUDIO_INSTALLATION}" -o public/img/icons apply-light-theme
 
 At some point we may provide pre-extracted bundles that can be used with Mule Preview.
 We are still unsure about the licencing conditions around bundling and redistributing Mulesoft assets.
