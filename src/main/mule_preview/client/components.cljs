@@ -137,7 +137,10 @@
     (fn []
       [:div {:ref #(reset! anchor-el %)}
        [:div {:class ["component-container" css-class]
-              :on-mouse-over (m/handler-fn (reset! showing-atom should-show-tooltip))
+              :on-mouse-over (m/handler-fn
+                              (when should-show-tooltip
+                                (reset! showing-atom should-show-tooltip)
+                                (.stopPropagation event)))
               :on-mouse-out  (m/handler-fn (reset! showing-atom false))}
         (when diff-icon-url (image diff-icon-url "diff-icon" content-root))
         [:div
@@ -162,7 +165,10 @@
     (fn []
       [:div {:ref #(reset! anchor-el %)}
        [:div {:class ["container" generated-css-class css-class]
-              :on-mouse-over (m/handler-fn (reset! showing-atom should-show-tooltip))
+              :on-mouse-over (m/handler-fn
+                              (when should-show-tooltip
+                                (reset! showing-atom should-show-tooltip)
+                                (.stopPropagation event)))
               :on-mouse-out  (m/handler-fn (reset! showing-atom false))}
         [:div {:class "container-title"} description]
         [:div {:class "container-inner"}
