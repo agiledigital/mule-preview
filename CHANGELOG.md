@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/agiledigital/mule-preview/compare/v2.0.0...v2.0.1) (2019-09-22)
+
+
+### Bug Fixes
+
+* fix issue with tooltip flickering ([756007d](https://github.com/agiledigital/mule-preview/commit/756007d)), closes [#20](https://github.com/agiledigital/mule-preview/issues/20)
+
 # [2.0.0](https://github.com/agiledigital/mule-preview/compare/v1.0.18...v2.0.0) (2019-09-21)
 
 
