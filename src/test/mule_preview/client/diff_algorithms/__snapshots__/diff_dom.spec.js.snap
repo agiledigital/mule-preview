@@ -3,40 +3,14 @@
 exports[`when diffing two MAST data structures produces correct output 1`] = `
 Array [
   Object {
-    "action": "modifyAttribute",
-    "name": "2",
-    "newValue": Object {
-      "description": null,
-      "hash": -83749566,
-      "tag-name": "mule",
-    },
-    "oldValue": Object {
-      "description": null,
-      "hash": -83749566,
-      "tag-name": "mule",
-    },
-    "route": Array [],
-  },
-  Object {
     "action": "removeElement",
     "element": Object {
       "attributes": Array [
         "horizontal",
-        Object {
-          "description": "example:/expunge-convolvers",
-          "hash": 1066677628,
-          "tag-name": "sub-flow",
-        },
       ],
       "childNodes": Array [
         Object {
-          "attributes": Array [
-            Object {
-              "description": "Flush the convolver prisms",
-              "hash": 579843109,
-              "tag-name": "db:no-operation-selected",
-            },
-          ],
+          "attributes": Array [],
           "childNodes": null,
           "location": Object {
             "column": 104,
@@ -45,35 +19,24 @@ Array [
           "nodeName": "db:no-operation-selected",
           "original-labels": null,
           "original-type": "component",
+          "other-attributes": Object {
+            "description": "Flush the convolver prisms",
+            "hash": 579843109,
+            "tag-name": "db:no-operation-selected",
+          },
         },
         Object {
           "attributes": Array [
             "vertical",
-            Object {
-              "description": "Did the flush occur?",
-              "hash": -1105159260,
-              "tag-name": "choice",
-            },
           ],
           "childNodes": Array [
             Object {
               "attributes": Array [
                 "horizontal",
-                Object {
-                  "description": null,
-                  "hash": 2014296490,
-                  "tag-name": "when",
-                },
               ],
               "childNodes": Array [
                 Object {
-                  "attributes": Array [
-                    Object {
-                      "description": "Fetch more prisms",
-                      "hash": 881435866,
-                      "tag-name": "s3:no-operation-selected",
-                    },
-                  ],
+                  "attributes": Array [],
                   "childNodes": null,
                   "location": Object {
                     "column": 86,
@@ -82,15 +45,14 @@ Array [
                   "nodeName": "s3:no-operation-selected",
                   "original-labels": null,
                   "original-type": "component",
+                  "other-attributes": Object {
+                    "description": "Fetch more prisms",
+                    "hash": 881435866,
+                    "tag-name": "s3:no-operation-selected",
+                  },
                 },
                 Object {
-                  "attributes": Array [
-                    Object {
-                      "description": "Log number of fanglehockeys",
-                      "hash": 543925965,
-                      "tag-name": "logger",
-                    },
-                  ],
+                  "attributes": Array [],
                   "childNodes": null,
                   "location": Object {
                     "column": 77,
@@ -99,6 +61,11 @@ Array [
                   "nodeName": "logger",
                   "original-labels": null,
                   "original-type": "component",
+                  "other-attributes": Object {
+                    "description": "Log number of fanglehockeys",
+                    "hash": 543925965,
+                    "tag-name": "logger",
+                  },
                 },
               ],
               "location": Object {
@@ -108,25 +75,19 @@ Array [
               "nodeName": "when",
               "original-labels": null,
               "original-type": "container",
+              "other-attributes": Object {
+                "description": null,
+                "hash": 2014296490,
+                "tag-name": "when",
+              },
             },
             Object {
               "attributes": Array [
                 "horizontal",
-                Object {
-                  "description": null,
-                  "hash": -15128758,
-                  "tag-name": "otherwise",
-                },
               ],
               "childNodes": Array [
                 Object {
-                  "attributes": Array [
-                    Object {
-                      "description": "Log Error",
-                      "hash": -818462707,
-                      "tag-name": "logger",
-                    },
-                  ],
+                  "attributes": Array [],
                   "childNodes": null,
                   "location": Object {
                     "column": 73,
@@ -135,6 +96,11 @@ Array [
                   "nodeName": "logger",
                   "original-labels": null,
                   "original-type": "component",
+                  "other-attributes": Object {
+                    "description": "Log Error",
+                    "hash": -818462707,
+                    "tag-name": "logger",
+                  },
                 },
               ],
               "location": Object {
@@ -144,6 +110,11 @@ Array [
               "nodeName": "otherwise",
               "original-labels": null,
               "original-type": "container",
+              "other-attributes": Object {
+                "description": null,
+                "hash": -15128758,
+                "tag-name": "otherwise",
+              },
             },
           ],
           "location": Object {
@@ -153,6 +124,11 @@ Array [
           "nodeName": "choice",
           "original-labels": null,
           "original-type": "container",
+          "other-attributes": Object {
+            "description": "Did the flush occur?",
+            "hash": -1105159260,
+            "tag-name": "choice",
+          },
         },
       ],
       "location": Object {
@@ -162,121 +138,20 @@ Array [
       "nodeName": "sub-flow",
       "original-labels": null,
       "original-type": "container",
+      "other-attributes": Object {
+        "description": "example:/expunge-convolvers",
+        "hash": 1066677628,
+        "tag-name": "sub-flow",
+      },
     },
     "route": Array [
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "example:/http-incoming-flow",
-      "tag-name": "flow",
-    },
-    "oldValue": Object {
-      "description": "example:/http-incoming-flow",
-      "tag-name": "flow",
-    },
-    "route": Array [
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": 1816956808,
-      "tag-name": "sub-flow",
-    },
-    "oldValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": 1816956808,
-      "tag-name": "sub-flow",
-    },
-    "route": Array [
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "",
-      "tag-name": "psuedo",
-    },
-    "oldValue": Object {
-      "description": "",
-      "tag-name": "psuedo",
-    },
-    "route": Array [
-      0,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "",
-      "tag-name": "psuedo",
-    },
-    "oldValue": Object {
-      "description": "",
-      "tag-name": "psuedo",
-    },
-    "route": Array [
-      0,
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "Clean carburetors",
-      "hash": -688832045,
-      "tag-name": "scatter-gather",
-    },
-    "oldValue": Object {
-      "description": "Clean carburetors",
-      "hash": -688832045,
-      "tag-name": "scatter-gather",
-    },
-    "route": Array [
-      1,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Start Internal Noodle Engine",
-      "hash": -1986262879,
-      "tag-name": "http:request",
-    },
-    "oldValue": Object {
-      "description": "Start Internal Noodle Engine",
-      "hash": -1986262879,
-      "tag-name": "http:request",
-    },
-    "route": Array [
-      1,
       1,
     ],
   },
   Object {
     "action": "addElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "Overwrite the payload",
-          "hash": 266487046,
-          "tag-name": "set-payload",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 72,
@@ -285,6 +160,11 @@ Array [
       "nodeName": "set-payload",
       "original-labels": null,
       "original-type": "component",
+      "other-attributes": Object {
+        "description": "Overwrite the payload",
+        "hash": 266487046,
+        "tag-name": "set-payload",
+      },
     },
     "route": Array [
       0,
@@ -295,13 +175,7 @@ Array [
   Object {
     "action": "removeElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "Filter recalcitrant ions",
-          "hash": -2096291590,
-          "tag-name": "expression-filter",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 78,
@@ -310,276 +184,22 @@ Array [
       "nodeName": "expression-filter",
       "original-labels": null,
       "original-type": "component",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "Catch Exception Strategy",
-      "hash": 497298084,
-      "tag-name": "catch-exception-strategy",
-    },
-    "oldValue": Object {
-      "description": "Catch Exception Strategy",
-      "hash": 497298084,
-      "tag-name": "catch-exception-strategy",
-    },
-    "route": Array [
-      0,
-      1,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "Processor Chain",
-      "hash": 1690317879,
-      "tag-name": "processor-chain",
-    },
-    "oldValue": Object {
-      "description": "Processor Chain",
-      "hash": 1690317879,
-      "tag-name": "processor-chain",
-    },
-    "route": Array [
-      1,
-      0,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": null,
-      "hash": -15128758,
-      "tag-name": "processor-chain",
-    },
-    "oldValue": Object {
-      "description": null,
-      "hash": -15128758,
-      "tag-name": "processor-chain",
-    },
-    "route": Array [
-      1,
-      0,
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Clean Carburetor 3",
-      "hash": 598254326,
-      "tag-name": "http:request",
-    },
-    "oldValue": Object {
-      "description": "Clean Carburetor 3",
-      "hash": 598254326,
-      "tag-name": "http:request",
-    },
-    "route": Array [
-      1,
-      0,
-      2,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Overwrite the payload",
-      "hash": 266487046,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Overwrite the payload",
-      "hash": 266487046,
-      "tag-name": "set-payload",
-    },
-    "route": Array [
-      0,
-      0,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "HTTP",
-      "hash": 2077519509,
-      "tag-name": "http:listener",
-    },
-    "oldValue": Object {
-      "description": "HTTP",
-      "hash": 2077519509,
-      "tag-name": "http:listener",
-    },
-    "route": Array [
-      0,
-      0,
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Set Z level to 7000",
-      "hash": 641237277,
-      "tag-name": "set-variable",
-    },
-    "oldValue": Object {
-      "description": "Set Z level to 9000",
-      "hash": 1907014272,
-      "tag-name": "set-variable",
-    },
-    "route": Array [
-      0,
-      0,
-      2,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Overwrite the payload",
-      "hash": 266487046,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Overwrite the payload",
-      "hash": 266487046,
-      "tag-name": "set-payload",
-    },
-    "route": Array [
-      0,
-      0,
-      3,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "example:/expunge-convolvers",
-      "hash": 771211107,
-      "tag-name": "flow-ref",
-    },
-    "oldValue": Object {
-      "description": "example:/expunge-convolvers",
-      "hash": 771211107,
-      "tag-name": "flow-ref",
-    },
-    "route": Array [
-      0,
-      0,
-      4,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "1",
-    "newValue": Object {
-      "description": "For Each",
-      "hash": 242079301,
-      "tag-name": "foreach",
-    },
-    "oldValue": Object {
-      "description": "For Each",
-      "hash": 242079301,
-      "tag-name": "foreach",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Server Noodles",
-      "hash": -789013297,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Server Noodles",
-      "hash": -789013297,
-      "tag-name": "set-payload",
-    },
-    "route": Array [
-      0,
-      0,
-      6,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Deduplicate",
-      "hash": 251600214,
-      "tag-name": "dw:transform-message",
-    },
-    "oldValue": Object {
-      "description": "Deduplicate",
-      "hash": 385704797,
-      "tag-name": "dw:transform-message",
-    },
-    "route": Array [
-      0,
-      0,
-      7,
-    ],
-  },
-  Object {
-    "action": "addElement",
-    "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "Server Noodles 2",
-          "hash": 798826535,
-          "tag-name": "set-payload",
-        },
-      ],
-      "childNodes": null,
-      "location": Object {
-        "column": 50,
-        "line": 35,
+      "other-attributes": Object {
+        "description": "Filter recalcitrant ions",
+        "hash": -2096291590,
+        "tag-name": "expression-filter",
       },
-      "nodeName": "set-payload",
-      "original-labels": null,
-      "original-type": "component",
     },
     "route": Array [
       0,
       0,
-      8,
+      5,
     ],
   },
   Object {
     "action": "addElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "Nothing to see here",
-          "hash": 54737936,
-          "tag-name": "set-payload",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 57,
@@ -588,104 +208,23 @@ Array [
       "nodeName": "set-payload",
       "original-labels": null,
       "original-type": "component",
+      "other-attributes": Object {
+        "description": "Nothing to see here",
+        "hash": 54737936,
+        "tag-name": "set-payload",
+      },
     },
     "route": Array [
       0,
       1,
       0,
       0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Clean Carburetor 1",
-      "hash": 1112970330,
-      "tag-name": "http:request",
-    },
-    "oldValue": Object {
-      "description": "Clean Carburetor 1",
-      "hash": 1112970330,
-      "tag-name": "http:request",
-    },
-    "route": Array [
-      1,
-      0,
-      0,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "XML to DOM",
-      "hash": -255883650,
-      "tag-name": "mulexml:xml-to-dom-transformer",
-    },
-    "oldValue": Object {
-      "description": "XML to DOM",
-      "hash": -255883650,
-      "tag-name": "mulexml:xml-to-dom-transformer",
-    },
-    "route": Array [
-      1,
-      0,
-      0,
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Oops this has a really long name",
-      "hash": -1901883164,
-      "tag-name": "http:request",
-    },
-    "oldValue": Object {
-      "description": "Oops this has a really long name",
-      "hash": -1901883164,
-      "tag-name": "http:request",
-    },
-    "route": Array [
-      1,
-      0,
-      1,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Set Payload",
-      "hash": 1079074260,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Set Payload",
-      "hash": 1079074260,
-      "tag-name": "set-payload",
-    },
-    "route": Array [
-      1,
-      0,
-      1,
-      1,
     ],
   },
   Object {
     "action": "addElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "example:/strain-overflow-noodle-requests",
-          "hash": -2070961420,
-          "tag-name": "flow-ref",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 123,
@@ -694,6 +233,11 @@ Array [
       "nodeName": "flow-ref",
       "original-labels": null,
       "original-type": "component",
+      "other-attributes": Object {
+        "description": "example:/strain-overflow-noodle-requests",
+        "hash": -2070961420,
+        "tag-name": "flow-ref",
+      },
     },
     "route": Array [
       0,
@@ -705,13 +249,7 @@ Array [
   Object {
     "action": "addElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "example:/strain-overflow-noodle-requests",
-          "hash": -2070961420,
-          "tag-name": "flow-ref",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 123,
@@ -720,6 +258,11 @@ Array [
       "nodeName": "flow-ref",
       "original-labels": null,
       "original-type": "component",
+      "other-attributes": Object {
+        "description": "example:/strain-overflow-noodle-requests",
+        "hash": -2070961420,
+        "tag-name": "flow-ref",
+      },
     },
     "route": Array [
       0,
@@ -731,13 +274,7 @@ Array [
   Object {
     "action": "addElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "example:/strain-overflow-noodle-requests",
-          "hash": -2070961420,
-          "tag-name": "flow-ref",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 123,
@@ -746,6 +283,11 @@ Array [
       "nodeName": "flow-ref",
       "original-labels": null,
       "original-type": "component",
+      "other-attributes": Object {
+        "description": "example:/strain-overflow-noodle-requests",
+        "hash": -2070961420,
+        "tag-name": "flow-ref",
+      },
     },
     "route": Array [
       0,
@@ -757,13 +299,7 @@ Array [
   Object {
     "action": "addElement",
     "element": Object {
-      "attributes": Array [
-        Object {
-          "description": "example:/strain-overflow-noodle-requests",
-          "hash": -2070961420,
-          "tag-name": "flow-ref",
-        },
-      ],
+      "attributes": Array [],
       "childNodes": null,
       "location": Object {
         "column": 123,
@@ -772,6 +308,11 @@ Array [
       "nodeName": "flow-ref",
       "original-labels": null,
       "original-type": "component",
+      "other-attributes": Object {
+        "description": "example:/strain-overflow-noodle-requests",
+        "hash": -2070961420,
+        "tag-name": "flow-ref",
+      },
     },
     "route": Array [
       0,
@@ -781,182 +322,27 @@ Array [
     ],
   },
   Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Server Noodles 2",
-      "hash": 798826535,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Server Noodles 2",
-      "hash": 798826535,
-      "tag-name": "set-payload",
+    "action": "addElement",
+    "element": Object {
+      "attributes": Array [],
+      "childNodes": null,
+      "location": Object {
+        "column": 50,
+        "line": 35,
+      },
+      "nodeName": "set-payload",
+      "original-labels": null,
+      "original-type": "component",
+      "other-attributes": Object {
+        "description": "Server Noodles 2",
+        "hash": 798826535,
+        "tag-name": "set-payload",
+      },
     },
     "route": Array [
       0,
       0,
       8,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Nothing to see here",
-      "hash": 54737936,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Nothing to see here",
-      "hash": 54737936,
-      "tag-name": "set-payload",
-    },
-    "route": Array [
-      0,
-      1,
-      0,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Overwrite the payload",
-      "hash": 266487046,
-      "tag-name": "set-payload",
-    },
-    "oldValue": Object {
-      "description": "Nothing to see here",
-      "hash": 54737936,
-      "tag-name": "set-payload",
-    },
-    "route": Array [
-      0,
-      1,
-      0,
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "Nor here",
-      "hash": 614804477,
-      "tag-name": "message-properties-transformer",
-    },
-    "oldValue": Object {
-      "description": "Nor here",
-      "hash": 614804477,
-      "tag-name": "message-properties-transformer",
-    },
-    "route": Array [
-      0,
-      1,
-      0,
-      2,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "oldValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-      0,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "oldValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-      1,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "oldValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-      2,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "oldValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-      3,
-    ],
-  },
-  Object {
-    "action": "modifyAttribute",
-    "name": "0",
-    "newValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "oldValue": Object {
-      "description": "example:/strain-overflow-noodle-requests",
-      "hash": -2070961420,
-      "tag-name": "flow-ref",
-    },
-    "route": Array [
-      0,
-      0,
-      5,
-      4,
     ],
   },
 ]

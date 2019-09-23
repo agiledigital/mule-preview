@@ -11,7 +11,7 @@
   (clojure.string/join " " (map name labels)))
 
 (defn- create-mule-component [node mappings content-root]
-  (let [{:keys [tag-name description labels location change-record]} node]
+  (let [{:keys [tag-name description labels location change-record attributes]} node]
     [(mule-component {:name tag-name
                       :description description
                       :css-class (labels-to-css labels)
@@ -19,10 +19,11 @@
                       :location location
                       :change-record change-record
                       :labels labels
-                      :mappings mappings})]))
+                      :mappings mappings
+                      :attributes attributes})]))
 
 (defn- create-mule-container-component [node mappings content-root]
-  (let [{:keys [tag-name description content labels location change-record]} node]
+  (let [{:keys [tag-name description content labels location change-record attributes]} node]
     [(mule-container {:name tag-name
                       :description description
                       :children content
@@ -31,7 +32,8 @@
                       :location location
                       :change-record change-record
                       :labels labels
-                      :mappings mappings})]))
+                      :mappings mappings
+                      :attributes attributes})]))
 
 (defn- transform-tag [mappings content-root node]
   (let [type (:type node)]

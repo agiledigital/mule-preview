@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`when rendering a Mule component when the component has mapping renders correctly 1`] = `
-<div>
+<div
+  className={null}
+>
   <div
     className="component-container some-css-class"
     onMouseOut={[Function]}
@@ -29,7 +31,9 @@ exports[`when rendering a Mule component when the component has mapping renders 
 `;
 
 exports[`when rendering a Mule component when the component is unknown renders correctly 1`] = `
-<div>
+<div
+  className={null}
+>
   <div
     className="component-container some-css-class"
     onMouseOut={[Function]}
@@ -78,11 +82,17 @@ exports[`when rendering a Mule container when it has children renders correctly 
           className="category-frame"
           src="/img/icons/org.mule.tooling.ui.modules.core.miscellaneous.large.png"
         />
+        <img
+          className="icon container-image"
+          src="/img/icons/UnknownNode-48x32.png"
+        />
       </div>
       <div
         className="container-children"
       >
-        <div>
+        <div
+          className={null}
+        >
           <div
             className="component-container some-css-class"
             onMouseOut={[Function]}
@@ -115,7 +125,9 @@ exports[`when rendering a Mule container when it has children renders correctly 
           className="flow-arrow"
           src="/img/arrow-right-2x.png"
         />
-        <div>
+        <div
+          className={null}
+        >
           <div
             className="component-container some-css-class"
             onMouseOut={[Function]}
@@ -148,7 +160,9 @@ exports[`when rendering a Mule container when it has children renders correctly 
           className="flow-arrow"
           src="/img/arrow-right-2x.png"
         />
-        <div>
+        <div
+          className={null}
+        >
           <div
             className="component-container some-css-class"
             onMouseOut={[Function]}
@@ -204,6 +218,10 @@ exports[`when rendering a Mule container when it has no children renders correct
         <img
           className="category-frame"
           src="/img/icons/org.mule.tooling.ui.modules.core.miscellaneous.large.png"
+        />
+        <img
+          className="icon container-image"
+          src="/img/icons/UnknownNode-48x32.png"
         />
       </div>
       <div

@@ -142,10 +142,26 @@
   max-width: 90px;
   padding: 5px;
   position: relative;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
 }
 
 .mp .component-container {
   position: relative;
+  border-radius: 5px;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.mp .highlighted > .component-container,
+.mp .highlighted.container {
+  background-color: #f3f3f3;
 }
 
 .mp .component > .label {
@@ -198,17 +214,14 @@
 /* Diffing Styles */
 .mp .edited {
   border: 2px solid #eea236;
-  border-radius: 5px;
 }
 
 .mp .added {
   border: 2px solid #4cae4c;
-  border-radius: 5px;
 }
 
 .mp .removed {
   border: 2px solid #d43f3a;
-  border-radius: 5px;
 }
 
 .mp .container.edited {
