@@ -5,7 +5,8 @@
    [mule-preview.client.mappings :refer [root-container horizontal-container-list
                                          vertical-container-list error-handler-component-list
                                          error-handler-container-list]]
-   [mule-preview.client.components :refer [mule-component mule-container]]))
+   [mule-preview.client.components.mule-component :refer [mule-component]]
+   [mule-preview.client.components.mule-container :refer [mule-container]]))
 
 (defn- labels-to-css [labels]
   (clojure.string/join " " (map name labels)))

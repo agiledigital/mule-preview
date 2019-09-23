@@ -142,21 +142,11 @@
   max-width: 90px;
   padding: 5px;
   position: relative;
-  -webkit-transition: background-color 200ms linear;
-  -moz-transition: background-color 200ms linear;
-  -o-transition: background-color 200ms linear;
-  -ms-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
 }
 
 .mp .component-container {
   position: relative;
   border-radius: 5px;
-  -webkit-transition: background-color 200ms linear;
-  -moz-transition: background-color 200ms linear;
-  -o-transition: background-color 200ms linear;
-  -ms-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
 }
 
 .mp .highlighted > .component-container,
@@ -291,7 +281,8 @@
 }
 
 .mp-popover {
-  max-width: 276px;
+  min-width: 200px;
+  max-width: 400px;
   padding: 1px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -340,6 +331,19 @@
 }
 .mp-popover-content {
   padding: 9px 14px;
+}
+
+.mp-popover-content dl {
+  margin: 0;
+}
+
+.mp-popover-content dt {
+  font-weight: bold;
+}
+
+.mp-popover-content dd {
+  margin-left: 0;
+  margin-bottom: 6px;
 }
 
 .mp-change-location {
