@@ -1,9 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import {
-  MuleComponent,
-  MuleContainer
-} from "../../../../dist/mule_preview.client.components";
+import { MuleComponent } from "../../../../dist/mule_preview.client.components.mule_component";
+import { MuleContainer } from "../../../../dist/mule_preview.client.components.mule_container";
 import {
   jsToClj,
   makeAtom,

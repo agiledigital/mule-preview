@@ -5,13 +5,14 @@
    [mule-preview.client.mappings :refer [root-container horizontal-container-list
                                          vertical-container-list error-handler-component-list
                                          error-handler-container-list]]
-   [mule-preview.client.components :refer [mule-component mule-container]]))
+   [mule-preview.client.components.mule-component :refer [mule-component]]
+   [mule-preview.client.components.mule-container :refer [mule-container]]))
 
 (defn- labels-to-css [labels]
   (clojure.string/join " " (map name labels)))
 
 (defn- create-mule-component [node mappings content-root]
-  (let [{:keys [tag-name description labels location change-record]} node]
+  (let [{:keys [tag-name description labels location change-record attributes]} node]
     [(mule-component {:name tag-name
                       :description description
                       :css-class (labels-to-css labels)
@@ -19,10 +20,11 @@
                       :location location
                       :change-record change-record
                       :labels labels
-                      :mappings mappings})]))
+                      :mappings mappings
+                      :attributes attributes})]))
 
 (defn- create-mule-container-component [node mappings content-root]
-  (let [{:keys [tag-name description content labels location change-record]} node]
+  (let [{:keys [tag-name description content labels location change-record attributes]} node]
     [(mule-container {:name tag-name
                       :description description
                       :children content
@@ -31,7 +33,8 @@
                       :location location
                       :change-record change-record
                       :labels labels
-                      :mappings mappings})]))
+                      :mappings mappings
+                      :attributes attributes})]))
 
 (defn- transform-tag [mappings content-root node]
   (let [type (:type node)]

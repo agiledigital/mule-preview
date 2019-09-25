@@ -57,7 +57,7 @@ payload distinctBy $.pies]]></dw:set-payload>
         </scatter-gather>
         <http:request config-ref="" path="" method="" doc:name="Start Internal Noodle Engine"/>
     </sub-flow>
-    <munit:test description="Bork Bork" name="some-test-2">
+    <munit:test description="Bork Bork" name="some-test-2" new-attribute="pizza">
         <mock:when doc:name="xxxx" messageProcessor=".*:.*">
             <mock:with-attributes>
                 <mock:with-attribute name="name" whereValue="#[matchContains('zzzyyy')]"/>

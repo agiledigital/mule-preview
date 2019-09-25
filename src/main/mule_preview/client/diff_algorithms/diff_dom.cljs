@@ -11,7 +11,8 @@
           other-attributes (dissoc node :type-tag :content :type :labels :attributes :location)]
       {:nodeName tag-name
        :childNodes content
-       :attributes (merge attributes other-attributes)
+       :attributes attributes
+       :other-attributes other-attributes
        :original-type type
        :original-labels labels
        :location location})
@@ -19,12 +20,13 @@
 
 (defn dom-to-node [node]
   (if (:nodeName node)
-    (let [{:keys [nodeName childNodes attributes original-type original-labels location]} node]
+    (let [{:keys [nodeName childNodes attributes original-type original-labels location other-attributes]} node]
       (merge {:tag-name nodeName
               :content childNodes
               :type (keyword original-type)
               :labels original-labels
-              :location location} attributes))
+              :location location
+              :attributes attributes} other-attributes))
     node))
 
 (defn mast->dom [mast]

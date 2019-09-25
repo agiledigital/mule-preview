@@ -30,9 +30,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
         Object {
           "content": Array [
             Object {
+              "attributes": Object {
+                "description": "Overwrite the payload",
+                "hash": 266487046,
+                "tag-name": "set-payload",
+              },
               "content": null,
-              "description": "Overwrite the payload",
-              "hash": 266487046,
               "labels": Array [
                 "added",
               ],
@@ -148,9 +151,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
               },
               "content": Array [
                 Object {
+                  "attributes": Object {
+                    "description": "example:/strain-overflow-noodle-requests",
+                    "hash": -2070961420,
+                    "tag-name": "flow-ref",
+                  },
                   "content": null,
-                  "description": "example:/strain-overflow-noodle-requests",
-                  "hash": -2070961420,
                   "labels": Array [
                     "added",
                   ],
@@ -159,9 +165,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
                   "type": "component",
                 },
                 Object {
+                  "attributes": Object {
+                    "description": "example:/strain-overflow-noodle-requests",
+                    "hash": -2070961420,
+                    "tag-name": "flow-ref",
+                  },
                   "content": null,
-                  "description": "example:/strain-overflow-noodle-requests",
-                  "hash": -2070961420,
                   "labels": Array [
                     "added",
                   ],
@@ -170,9 +179,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
                   "type": "component",
                 },
                 Object {
+                  "attributes": Object {
+                    "description": "example:/strain-overflow-noodle-requests",
+                    "hash": -2070961420,
+                    "tag-name": "flow-ref",
+                  },
                   "content": null,
-                  "description": "example:/strain-overflow-noodle-requests",
-                  "hash": -2070961420,
                   "labels": Array [
                     "added",
                   ],
@@ -181,9 +193,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
                   "type": "component",
                 },
                 Object {
+                  "attributes": Object {
+                    "description": "example:/strain-overflow-noodle-requests",
+                    "hash": -2070961420,
+                    "tag-name": "flow-ref",
+                  },
                   "content": null,
-                  "description": "example:/strain-overflow-noodle-requests",
-                  "hash": -2070961420,
                   "labels": Array [
                     "added",
                   ],
@@ -262,9 +277,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
               "type": "component",
             },
             Object {
+              "attributes": Object {
+                "description": "Server Noodles 2",
+                "hash": 798826535,
+                "tag-name": "set-payload",
+              },
               "content": null,
-              "description": "Server Noodles 2",
-              "hash": 798826535,
               "labels": Array [
                 "added",
               ],
@@ -289,9 +307,12 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
               },
               "content": Array [
                 Object {
+                  "attributes": Object {
+                    "description": "Nothing to see here",
+                    "hash": 54737936,
+                    "tag-name": "set-payload",
+                  },
                   "content": null,
-                  "description": "Nothing to see here",
-                  "hash": 54737936,
                   "labels": Array [
                     "added",
                   ],
