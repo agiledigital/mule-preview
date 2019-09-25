@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/agiledigital/mule-preview/compare/v2.0.1...v2.1.0) (2019-09-25)
+
+
+### Features
+
+* add tooltips to all components/containers ([739fbf7](https://github.com/agiledigital/mule-preview/commit/739fbf7)), closes [#4](https://github.com/agiledigital/mule-preview/issues/4)
+
 ## [2.0.1](https://github.com/agiledigital/mule-preview/compare/v2.0.0...v2.0.1) (2019-09-22)
 
 
