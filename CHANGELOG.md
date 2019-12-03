@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/agiledigital/mule-preview/compare/v2.1.1...v2.2.0) (2019-12-03)
+
+
+### Bug Fixes
+
+* incorrect badge code ([f160b16](https://github.com/agiledigital/mule-preview/commit/f160b16))
+
+
+### Features
+
+* add semantic release badge ([3ef1731](https://github.com/agiledigital/mule-preview/commit/3ef1731))
+
 ## [2.1.1](https://github.com/agiledigital/mule-preview/compare/v2.1.0...v2.1.1) (2019-10-10)
 
 

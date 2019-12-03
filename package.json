@@ -1,7 +1,7 @@
 {
   "name": "@agiledigital/mule-preview",
   "description": "Renders Mule XML files as HTML.",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
