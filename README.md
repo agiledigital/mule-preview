@@ -5,6 +5,7 @@
 [![Known Vulnerabilities](https://snyk.io//test/github/agiledigital/mule-preview/badge.svg?targetFile=package.json)](https://snyk.io//test/github/agiledigital/mule-preview?targetFile=package.json)
 ![npm (scoped)](https://img.shields.io/npm/v/@agiledigital/mule-preview)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fagiledigital%2Fmule-preview.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fagiledigital%2Fmule-preview?ref=badge_shield)
+[![CircleCI](https://circleci.com/gh/agiledigital/mule-preview/tree/master.svg?style=svg)](https://circleci.com/gh/agiledigital/mule-preview/tree/master)
 
 ### Summary
 
