@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/agiledigital/mule-preview/compare/v2.2.0...v2.2.1) (2019-12-12)
+
+
+### Bug Fixes
+
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([6230e96](https://github.com/agiledigital/mule-preview/commit/6230e96))
+
 # [2.2.0](https://github.com/agiledigital/mule-preview/compare/v2.1.1...v2.2.0) (2019-12-03)
 
 
