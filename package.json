@@ -27,7 +27,7 @@
     "react-dom": "^16.9.0",
     "react-test-renderer": "^16.9.0",
     "rimraf": "^2.7.1",
-    "semantic-release": "^15.13.24",
+    "semantic-release": "^15.14.0",
     "shadow-cljs": "^2.8.52",
     "source-map-support": "^0.5.13",
     "stylelint": "^10.1.0",
