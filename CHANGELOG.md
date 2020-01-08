@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/agiledigital/mule-preview/compare/v2.2.1...v2.2.2) (2020-01-08)
+
+
+### Bug Fixes
+
+* update dependencies ([9953d87](https://github.com/agiledigital/mule-preview/commit/9953d87))
+
 ## [2.2.1](https://github.com/agiledigital/mule-preview/compare/v2.2.0...v2.2.1) (2019-12-12)
 
 
