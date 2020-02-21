@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/agiledigital/mule-preview/compare/v2.2.3...v2.2.4) (2020-02-21)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([c064aa3](https://github.com/agiledigital/mule-preview/commit/c064aa3))
+
 ## [2.2.3](https://github.com/agiledigital/mule-preview/compare/v2.2.2...v2.2.3) (2020-01-22)
 
 
