@@ -3,7 +3,7 @@
   (:require
    [mule-preview.client.react :refer [mast->react]]
    [mule-preview.client.mast :refer [xml->mast]]
-   [mule-preview.client.transformers.apply_patch :refer [augment-mast-with-diff]]
+   [mule-preview.client.transformers.apply-patch :refer [augment-mast-with-diff]]
    [mule-preview.client.diff-algorithms.diff-dom :refer [diff]]
    [mule-preview.client.views.common :refer [fetch-mappings]]
    [reagent.core :as r]
