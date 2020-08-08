@@ -5,7 +5,7 @@ import { MuleContainer } from "../../../../dist/mule_preview.client.components.m
 import {
   jsToClj,
   makeAtom,
-  makeSet
+  makeSet,
 } from "../../../../dist/mule_preview.client.test_utils";
 import { readFileSync } from "fs";
 import { join } from "path";

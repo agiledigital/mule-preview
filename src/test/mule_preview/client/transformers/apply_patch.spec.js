@@ -3,7 +3,7 @@ import { augment_mast_with_diff as augmentMastWithDiff } from "../../../../../di
 import {
   xmlToClj,
   cljToJs,
-  jsToClj
+  jsToClj,
 } from "../../../../../dist/mule_preview.client.test_utils";
 import { readFileSync } from "fs";
 import { join } from "path";
