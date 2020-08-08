@@ -3,7 +3,7 @@
    https://github.com/fiduswriter/diffDOM"
   (:require
    [clojure.walk :refer [prewalk]]
-   ["diff-dom" :refer (DiffDOM)]))
+   ["@noxharmonium/diff-dom" :refer (DiffDOM)]))
 
 (defn- node-to-dom [node]
   (if (:type node)

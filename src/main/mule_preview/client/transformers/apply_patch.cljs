@@ -1,4 +1,4 @@
-(ns mule-preview.client.transformers.apply_patch
+(ns mule-preview.client.transformers.apply-patch
   "Functions that take the output of diffDOM and transform a MAST data structure to reflect the changes in the diff."
   (:require
    [clojure.walk :refer [prewalk]]

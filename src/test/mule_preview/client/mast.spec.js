@@ -1,7 +1,7 @@
 import { xml__GT_mast as xmlToMast } from "../../../../dist/mule_preview.client.mast";
 import {
   xmlToClj,
-  cljToJs
+  cljToJs,
 } from "../../../../dist/mule_preview.client.test_utils";
 import { readFileSync } from "fs";
 import { join } from "path";
