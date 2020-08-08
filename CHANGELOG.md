@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/agiledigital/mule-preview/compare/v2.2.4...v2.2.5) (2020-08-08)
+
+
+### Bug Fixes
+
+* fix incorrect namespace characters ([97b5d28](https://github.com/agiledigital/mule-preview/commit/97b5d2824d26e9ceabbfbbd96f60a54bebf54e51))
+
 ## [2.2.4](https://github.com/agiledigital/mule-preview/compare/v2.2.3...v2.2.4) (2020-02-21)
 
 
