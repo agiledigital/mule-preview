@@ -20,7 +20,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
     "if-env": "^1.0.4",
-    "jest": "^26.2.2",
+    "jest": "^27.0.5",
     "prettier": "^2.0.5",
     "prettier-stylelint": "^0.4.2",
     "react": "^17.0.1",
